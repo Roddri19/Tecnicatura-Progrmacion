@@ -51,25 +51,32 @@ del nombres
 print(nombres)
 '''
 
-# Ejercicio 1: Iterar un rango de 0 a 10 e imprimir números divisibles entre 3
-# Ejercicio de ejecución: 0,3,6,9
+# Definimos una tupla
+cocina = ('cuchara', 'cuchillo', 'tenedor')
+print(len(cocina))
 
-print('Rango de 0 a 10 con numeros divisibles entre 3')
-for i in range(11):
-    if i % 3 == 0:
-        print(i)
+# Acceder a un elemento, para esto utilizamos corchetes, NO PARENTESIS
 
-# Ejercicio 2: Crear un rango de números de 2 a 6 e imprimirlos
-# Ejemplo de ejecución: 2,3,4,5,6
+print(cocina[0])
 
-print('Rango de numeros de 2 a 6 e imprimirlos')
-for i in range(7):
-    if i > 1 and i < 7:
-        print(i)
+# Mostrar la manera inversa
+print(cocina[-1])
 
-# Ejercicio 3: Crear un rango de 3 a 10 pero con incremento de 2 en 2, en lugar de 1 en 1
-# Ejemplo de ejecución: 3,5,7,9
+# Acceder a un rango
+print(cocina[0:2])
 
-print('Crear un rango de 3 a 10 pero con incremento de 2 en 2')
-for i in range(2,11,2):
-    print(i)
+# Ejemplo
+verduras = ('papa',) # Una tupla necesita aunque sea de un elemento; la coma.
+# De lo contrario solo sería un tipo string: cadena.
+
+# Recorremos los elementos de la tupla
+for cocinar in cocina: # Print está usando \n para saltos de líneas.
+    print(cocinar, end=' ') # Usamos end= para eliminar los saltos de líneas.
+
+cocinaLista = list(cocina)
+cocinaLista[0] = 'Plato'
+cocina = tuple(cocinaLista)
+print('\n', cocina)
+
+# del cocina, con esto eliminamos la tupla.
+
